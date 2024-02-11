@@ -5,7 +5,6 @@ let initialGameBoard = [
   [null, null, null],
   [null, null, null],
 ];
-
 export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
   const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
@@ -29,7 +28,6 @@ export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
             {row.map((playerSymbol, colIndex) => (
               <li key={colIndex}>
                 <button onClick={() => handleSelectSquare(rowIndex, colIndex)}>
-                  {' '}
                   {playerSymbol}
                 </button>
               </li>
